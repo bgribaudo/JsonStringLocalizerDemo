@@ -1,0 +1,13 @@
+﻿@model ExampleModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer _
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@_["Key"]</h1>
+
+<form asp-action="Index">
+    <span asp-validation-for="Field1"></span><br />
+    Field 1: <input asp-for="Field1" /><br />
+    <button type="submit">Submit</button>
+</form>
